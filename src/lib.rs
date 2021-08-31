@@ -39,6 +39,7 @@
 //!
 //! `git log --show-signature`
 
+// be tough on code quality
 #![warn(future_incompatible)]
 #![deny(
     missing_docs,
@@ -54,7 +55,7 @@
     unused_qualifications,
     unused_results,
     variant_size_differences
-)] // be tough on code quality
+)]
 
 use std::fmt;
 use std::time::SystemTime;
@@ -196,11 +197,11 @@ pub struct Game {
     pub cube_owner: Player,
     /// was cube offered to the one who plays?
     pub cube_received: bool,
-    // Crawford rule: if crawford game, no doubling allowed
+    /// Crawford rule: if crawford game, no doubling allowed
     crawford: bool,
-    // Holland rule: if <4 rolls of crawford game, no doubling allowed
+    /// Holland rule: if <4 rolls of crawford game, no doubling allowed
     since_crawford: u8,
-    // Gather statistical information
+    /// Gather statistical information
     statistics: Statistics,
 }
 

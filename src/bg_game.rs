@@ -2,9 +2,6 @@ use rand::distributions::{Distribution, Uniform};
 
 use super::{Error, Game, Player, Statistics};
 
-// Backgammon uses 15 checkers per side
-//const CHECKERS: u8 = 15;
-
 impl Game {
     /// Start a new game
     pub fn new() -> Self {
@@ -50,37 +47,6 @@ impl Game {
             }
         }
     }
-
-    //    fn calculate_free_positions(&mut self) {
-    //        // set free positions of computer to zero
-    //        self.free_positions_computer = 0;
-    //        self.free_positions_opponent = 0;
-    //
-    //        // check bar first
-    //        if self.accounting.board[24] > 0 {
-    //            for i in 0..5 {
-    //                if self.accounting.board[i] > -2 {
-    //                    self.free_positions_computer |= 2u32.pow(i as u32);
-    //                }
-    //            }
-    //        } else {
-    //            for i in 0..23 {
-    //                if self.accounting.board[i] > -2 {
-    //                    self.free_positions_computer |= 2u32.pow(i as u32);
-    //                }
-    //            }
-    //
-    //            if self.accounting.board[25] > 0 {
-    //                // set free positions of computer to zer
-    //                self.free_positions_opponent = 0;
-    //                for i in 18..23 {
-    //                    if self.accounting.board[i] > -1 {
-    //                        self.free_positions_computer |= 2u32.pow(i as u32);
-    //                    }
-    //                }
-    //            }
-    //        }
-    //    }
 }
 
 impl Default for Game {
